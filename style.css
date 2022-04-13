@@ -1,0 +1,216 @@
+body{
+    background-color: rgb(31, 40, 46);
+    padding: 0px;
+    margin: 0px;
+}
+
+#mainBody{
+    transform: translate(-50%,-50%);
+    position: fixed;
+    width: 85%;
+    height: 70%;
+    top: 50%;
+    left:50%;
+    max-width: 1000px;
+    max-height: 550px;
+}
+
+.gridItem{
+    background-repeat: no-repeat;
+    background-position: 90% -5%;
+    max-width: 400px;
+    display: flex;
+    min-width: 200px;
+    min-height: 200px;
+    border-radius: 30px;
+    background-color: rgb(45, 58, 66);
+}
+
+.textFont{
+    color: azure;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.textFont2{
+    color: rgb(109, 135, 173);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.mainBackground{
+    display: inline-block;
+    align-self: end;
+    border-radius: 30px;
+    margin-top: 20%;
+    width: 100%;
+    height: 80%;
+    background-color: rgb(45, 58, 66);
+    box-shadow: 0 0 0 1px rgb(45, 58, 66);
+}
+
+.threeDots{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.personItems:hover{
+    transition: 200ms;
+    color: rgb(207, 207, 207);
+}
+
+/*----------------------------------------------------- PERSON --------------------------------------------------*/
+
+#personImg{
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 90px;
+    height: 90px;
+    box-shadow: 0 0 0 3px rgb(255, 255, 255);
+    border-radius: 60px;
+}
+
+.personItems{
+    cursor: pointer;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/*-------------------------------------------------------WORK-----------------------------------------------------*/
+
+#work{
+    background-color: rgb(207, 160, 74);
+}
+
+#play{
+    background-color: rgb(74, 180, 207);
+}
+
+#study{
+    background-color: rgb(207, 105, 74);
+}
+
+#exercise{
+    background-color: rgb(74, 207, 96);
+}
+
+#social{
+    background-color: rgb(207, 74, 196);
+}
+
+#selfCare{
+    background-color: rgb(205, 207, 74);
+}
+
+/*--------------------------------------------------Ajust screensize---------------------------------------------*/
+
+@media only screen and (min-width: 1000px) {
+    #mainGridBody{
+        height: 100%;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        overflow: auto;
+    }    
+    #personTime{
+        margin-left: 20px;
+        margin-top: 10px;
+        height: 25%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    #person{
+        grid-area: 1 / 1 / 3 / 1;
+        min-width: 200px;
+        min-height: 200px;
+        border-radius: 30px;
+        background-color: rgb(45, 58, 66);
+    }
+    #reportForPerson{
+        margin-left: 30px;
+    }
+
+    #personProfile{
+        display: flex;
+        flex-flow: column;
+        border-radius: 30px;
+        height: 70%;
+        background-color: rgb(65, 88, 131);
+    }
+
+    .hrsMain{
+        display: flex;
+        flex-flow: column;
+        margin-left: 5%;
+        width: 90%;
+        height: 50%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #mainGridBody{
+        height: 100%;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        overflow-x: auto;
+    }    
+    #personTime{
+        margin-left: 20px;
+        margin-top: 10px;
+        height: 25%;
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    #person{
+        grid-area: 1 / 1 / 1 / 1;
+        min-width: 300px;
+        min-height: 200px;
+        max-width: 400px;
+        border-radius: 30px;
+        background-color: rgb(45, 58, 66);
+    }
+    #reportForPerson{
+        margin-left: 10px;
+    }
+    #personProfile{
+        justify-content:space-around;
+        display: flex;
+        flex-flow: row;
+        border-radius: 30px;
+        height: 70%;
+        background-color: rgb(65, 88, 131);
+    }
+    .hrsMain{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        margin-left: 5%;
+        width: 90%;
+        height: 50%;
+        align-items: flex-end;
+    }
+}
+@media only screen and (max-width: 650px) {
+    #mainGridBody{
+        height: 100%;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        overflow-x: auto;
+    }   
+}
+
+.attribution{
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%);
+}

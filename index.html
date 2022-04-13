@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <link href="./style.css" rel="stylesheet"></link>
+  <script src="https://requirejs.org/docs/release/2.3.6/minified/require.js"></script>
+  <script src="./data.json" id="data"></script>
+  <script src="./javascript.js"></script>
+</head>
+<body>
+  <div id="mainBody">
+    <div id="mainGridBody">
+      <div id="person">
+        <div id="personProfile">
+          <img src="images/image-jeremy.png" id="personImg"></img>
+          <div id="reportForPerson">
+            <h4 class="textFont" style="margin-bottom: 0px;">Report for</h4>
+            <h1 class="textFont" style="margin-top: 0px;">Jeremy Robson</h1>
+          </div>
+        </div>
+        <div id="personTime">
+          <h4 class="textFont2 personItems" id="daily">Daily</h4><br>
+          <h4 class="textFont2 personItems" id="weekly">Weekly</h4><br>
+          <h4 class="textFont2 personItems" id="monthly">Monthly</h4>
+        </div>
+      </div>
+      <div class="gridItem" id="work" style="background-image: url(./images/icon-work.svg);">
+        <div class="mainBackground">
+          <div style="display:flex;justify-content:space-between;flex-flow:row;">
+            <h2 class="textFont" style="margin-left: 20px;">Work</h2>  <h2 class="threeDots">. . .</h2>
+          </div>
+          <div class="hrsMain">
+            <h1 class="textFont" id="workHours" style="margin-top: 0px;margin-bottom: 10px;font-size: 250%;">32hrs</h1>
+            <h4 class="textFont2" id="prevworkHours" style="margin-top: 0px;margin-bottom: 20px;">Last Week - 36hrs</h4>
+          </div>
+        </div>
+      </div>
+      <div class="gridItem" id="play" style="background-image: url(./images/icon-play.svg);">
+        <div class="mainBackground">
+          <div style="display:flex;justify-content:space-between;flex-flow:row;">
+            <h2 class="textFont" style="margin-left: 20px;">Play</h2>  <h2 class="threeDots">. . .</h2>
+          </div>
+          <div class="hrsMain">
+            <h1 class="textFont" id="playHours" style="margin-top: 0px;margin-bottom: 10px;font-size: 250%;">32hrs</h1>
+            <h4 class="textFont2" id="prevplayHours" style="margin-top: 0px;margin-bottom: 20px;">Last Week - 36hrs</h4>
+          </div>
+        </div>
+      </div>
+      <div class="gridItem" id="study" style="background-image: url(./images/icon-study.svg);">
+        <div class="mainBackground">
+          <div style="display:flex;justify-content:space-between;flex-flow:row;">
+            <h2 class="textFont" style="margin-left: 20px;">Study</h2>  <h2 class="threeDots">. . .</h2>
+          </div>
+          <div class="hrsMain">
+            <h1 class="textFont" id="studyHours" style="margin-top: 0px;margin-bottom: 10px;font-size: 250%;">32hrs</h1>
+            <h4 class="textFont2" id="prevstudyHours" style="margin-top: 0px;margin-bottom: 20px;">Last Week - 36hrs</h4>
+          </div>
+        </div>
+      </div>
+      <div class="gridItem" id="exercise" style="background-image: url(./images/icon-exercise.svg);">
+        <div class="mainBackground">
+          <div style="display:flex;justify-content:space-between;flex-flow:row;">
+            <h2 class="textFont" style="margin-left: 20px;">Exercise</h2>  <h2 class="threeDots">. . .</h2>
+          </div>
+          <div class="hrsMain">
+            <h1 class="textFont" id="exerciseHours" style="margin-top: 0px;margin-bottom: 10px;font-size: 250%;">32hrs</h1>
+            <h4 class="textFont2" id="prevexerciseHours" style="margin-top: 0px;margin-bottom: 20px;">Last Week - 36hrs</h4>
+          </div>
+        </div>
+      </div>
+      <div class="gridItem" id="social" style="background-image: url(./images/icon-social.svg);">
+        <div class="mainBackground">
+          <div style="display:flex;justify-content:space-between;flex-flow:row;">
+            <h2 class="textFont" style="margin-left: 20px;">Social</h2>  <h2 class="threeDots">. . .</h2>
+          </div>
+          <div class="hrsMain">
+            <h1 class="textFont" id="socialHours" style="margin-top: 0px;margin-bottom: 10px;font-size: 250%;">32hrs</h1>
+            <h4 class="textFont2" id="prevsocialHours" style="margin-top: 0px;margin-bottom: 20px;">Last Week - 36hrs</h4>
+          </div>
+        </div>
+      </div>
+      <div class="gridItem" id="selfCare" style="background-image: url(./images/icon-self-care.svg);">
+        <div class="mainBackground">
+          <div style="display:flex;justify-content:space-between;flex-flow:row;">
+            <h2 class="textFont" style="margin-left: 20px;">Self Care</h2>  <h2 class="threeDots">. . .</h2>
+          </div>
+          <div class="hrsMain">
+            <h1 class="textFont" id="selfCareHours" style="margin-top: 0px;margin-bottom: 10px;font-size: 250%;">32hrs</h1>
+            <h4 class="textFont2" id="prevselfCareHours" style="margin-top: 0px;margin-bottom: 20px;">Last Week - 36hrs</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    <p class="textFont">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="textFont2">Frontend Mentor</a>. 
+      Coded by <a href="#" class="textFont2">NOAH</a>.  
+    </p>
+  </div>
+</body>
+</html>
